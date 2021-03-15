@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchSecondActivity(View view) {
-        Intent intent = new Intent(SecondActivity.class);
+        Intent intent = new Intent(this, SecondActivity.class);
         int id = view.getId();
         int textPassageNumber = 1;
 
