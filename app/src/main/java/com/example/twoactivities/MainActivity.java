@@ -1,5 +1,6 @@
 package com.example.twoactivities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String COUNT_EXTRA = "com.example.twoactivities.extra.COUNT";
     private TextView mCount;
     private int count;
 
@@ -19,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         count = Integer.parseInt(mCount.getText().toString());
     }
 
-    public void sayhello(View view) {
-
+    public void sayHello(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra(COUNT_EXTRA, count);
+        startActivity(intent);
     }
 
     public void countUp(View view) {
