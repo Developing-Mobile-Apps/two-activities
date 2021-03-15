@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center_vertical"
-        android:text="0"
+        android:text="@string/initial_count"
         android:textAlignment="center"
         android:textSize="160sp"
         app:layout_constraintBottom_toTopOf="@+id/button_count"
